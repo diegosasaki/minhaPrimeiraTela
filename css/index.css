@@ -1,0 +1,335 @@
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    background-image: url("../img/fundo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Roboto", Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* CARD PRINCIPAL */
+
+.card-login {
+    width: min(50vw, 820px);
+    height: min(90vh, 835px);
+
+    background: rgba(13, 35, 66, 0.91);
+
+    border: 2px solid #000;
+    border-radius: 120px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 14px 20px;
+
+    backdrop-filter: blur(5px);
+}
+
+
+/* CABEÇALHO */
+
+.cabecalho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+
+/* LOGO */
+
+.logo-container {
+    width: 145px;
+    height: 145px;
+
+    background-color: white;
+
+    border: 2px solid #000;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    padding: 8px;
+}
+
+
+/* TÍTULOS */
+
+.cabecalho h1 {
+    color: white;
+
+    font-size: 36px;
+    font-weight: 700;
+
+    margin-top: 42px;
+}
+
+.subtitulo {
+    color: #d1d8e2;
+
+    font-size: 22px;
+    font-weight: 700;
+
+    margin-top: 20px;
+}
+
+
+/* FORMULÁRIO */
+
+.form-login {
+    width: 100%;
+    max-width: 740px;
+
+    margin-top: 32px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* CAMPOS */
+
+.campo {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    align-items: center;
+
+    margin-bottom: 70px;
+}
+
+.campo label {
+    color: white;
+
+    font-size: 23px;
+    font-weight: 700;
+}
+
+
+/* ÁREA DO INPUT */
+
+.campo-input {
+    position: relative;
+    width: 100%;
+}
+
+.campo-input input {
+    width: 100%;
+    height: 74px;
+
+    background-color: white;
+
+    border: 2px solid #111;
+    border-radius: 12px;
+
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 20px;
+
+    padding-left: 65px;
+
+    outline: none;
+}
+
+
+/* ÍCONE DE USUÁRIO */
+
+.icone-usuario {
+    position: absolute;
+
+    left: 3px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 52px;
+    height: 64px;
+
+    z-index: 2;
+    pointer-events: none;
+}
+
+
+/* ÍCONE DE CADEADO */
+
+.icone-cadeado {
+    position: absolute;
+
+    left: 12px;
+    right: auto;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 48px;
+    height: 58px;
+
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* BOTÃO ENTRAR */
+
+.botao-entrar {
+    width: 308px;
+    height: 56px;
+
+    background-color: #387df5;
+
+    border: 2px solid #000;
+    border-radius: 10px;
+
+    color: #000;
+
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    margin-top: -45px;
+
+    transition: background-color 0.2s;
+}
+
+.botao-entrar:hover {
+    background-color: #2869dc;
+}
+
+
+/* CADASTRO */
+
+.cadastro {
+    color: #e5e9f0;
+
+    font-size: 20px;
+
+    margin-top: 30px;
+}
+
+.cadastro a {
+    color: #00d477;
+
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.cadastro a:hover {
+    text-decoration: underline;
+}
+
+
+/* RESPONSIVIDADE - NOTEBOOKS E TELAS MENORES */
+
+@media (max-width: 1100px) {
+
+    .card-login {
+        width: 70vw;
+        height: 90vh;
+        border-radius: 90px;
+    }
+
+    .form-login {
+        max-width: 90%;
+    }
+
+    .campo {
+        grid-template-columns: 110px 1fr;
+    }
+
+}
+
+
+/* RESPONSIVIDADE - CELULARES */
+
+@media (max-width: 600px) {
+
+    body {
+        min-height: 100vh;
+        padding: 15px;
+    }
+
+    .card-login {
+        width: 100%;
+        height: auto;
+        min-height: 700px;
+
+        border-radius: 45px;
+
+        padding: 25px 18px;
+    }
+
+    .logo-container {
+        width: 120px;
+        height: 120px;
+    }
+
+    .cabecalho h1 {
+        font-size: 30px;
+        margin-top: 30px;
+    }
+
+    .subtitulo {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .form-login {
+        margin-top: 45px;
+    }
+
+    .campo {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+
+    .campo label {
+        font-size: 18px;
+    }
+
+    .campo-input input {
+        height: 60px;
+    }
+
+    .botao-entrar {
+        width: 85%;
+        margin-top: 0;
+    }
+
+    .cadastro {
+        font-size: 15px;
+        text-align: center;
+    }
+
+}

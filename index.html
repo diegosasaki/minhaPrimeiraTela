@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tela de Login</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+    <main class="card-login">
+
+        <header class="cabecalho">
+
+            <div class="logo-container">
+                <img src="img/Logo.png" alt="Logo" class="logo">
+            </div>
+
+            <h1>Bem-vindo!</h1>
+
+            <p class="subtitulo">
+                Acesse sua conta para continuar
+            </p>
+
+        </header>
+
+        <form class="form-login">
+
+            <!-- CAMPO LOGIN -->
+            <div class="campo">
+
+                <label for="login">Login:</label>
+
+                <div class="campo-input">
+
+                    <svg class="icone-usuario" viewBox="0 0 52 64" aria-hidden="true">
+                        <circle cx="26" cy="19" r="14"
+                            fill="none"
+                            stroke="#111"
+                            stroke-width="3"/>
+
+                        <path d="M3 62 V58 C3 45 13 36 26 36 C39 36 49 45 49 58 V62"
+                            fill="none"
+                            stroke="#111"
+                            stroke-width="3"
+                            stroke-linecap="round"/>
+                    </svg>
+
+                    <input
+                        type="text"
+                        id="login"
+                        name="login"
+                        autocomplete="username"
+                    >
+
+                </div>
+
+            </div>
+
+            <!-- CAMPO SENHA -->
+            <div class="campo">
+
+                <label for="senha">Senha:</label>
+
+                <div class="campo-input">
+
+                    <svg class="icone-cadeado" viewBox="0 0 48 58" aria-hidden="true">
+                        <path
+                            
+                         d="M36 26 V17 A12 12 0 0 0 12 17 V13"
+                            fill="none"
+                            stroke="#111"
+                            stroke-width="5"
+                            stroke-linecap="round"
+                            
+                            
+                            
+                            
+                            
+                        />
+
+                        <rect
+                            x="5"
+                            y="24"
+                            width="38"
+                            height="32"
+                            rx="4"
+                            fill="#111"
+                        />
+
+                        <circle cx="24" cy="37" r="4" fill="white"/>
+
+                        <rect x="22" y="38" width="4" height="10" fill="white"/>
+                    </svg>
+
+                    <input
+                        type="password"
+                        id="senha"
+                        name="senha"
+                        autocomplete="current-password"
+                    >
+
+                </div>
+
+            </div>
+
+            <button type="submit" class="botao-entrar">
+                Entrar
+            </button>
+
+            <p class="cadastro">
+                Não possui Cadastro?
+                <a href="#">Cadastre-se</a>
+            </p>
+
+        </form>
+
+    </main>
+
+</body>
+</html>
